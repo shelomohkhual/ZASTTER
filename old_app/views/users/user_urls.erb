@@ -1,0 +1,36 @@
+<!-- <link rel="stylesheet" href="/css/style.css"> -->
+<style>
+/* .modifier{
+    display: inline-flex; 
+    margin: 0 20px;
+} */
+/* #scrollable{
+    height:300px;
+    overflow:hidden;
+    overflow-y:scroll;
+} */
+</style>
+<section class="list_urls text-center">
+        <h3> My Url's </h3>
+        <ul class="list" id="scrollable">
+            <% @num.times do |i|%>
+                <%  url = "#{@urls[i].short_url}" %>
+                <li class=" list-group-item mx-4">
+                    <a class="text-primary" href= <%= url %> > <%= url %> </a> 
+                    <span class="visits text-success">Visits : <%= @urls[i].visits %> </span> 
+                    <span class="form_modifier">
+                        <form action=<%= "/users/home/#{@urls[i].id}" %> class="modifier" method="POST">
+                            <input type="hidden" name="_method" value="PUT">
+                            <input type="submit" class="btn btn-md btn-primary" value="Update">
+                        </form>
+
+                        <form class="modifier" action=<%= "/users/home/#{@urls[i].id}" %>  method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="submit" class="btn btn-md btn-danger" name="_method" value="Delete">
+                        </form>
+                    </span>
+                </li>
+            <% end %>
+        </ul>
+
+    </section>

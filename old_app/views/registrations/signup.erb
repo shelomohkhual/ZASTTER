@@ -1,0 +1,26 @@
+
+    <link rel="stylesheet" href="/css/style.css">
+
+<div class="card-full">
+<h1 class="card-header text-center text-warning">Sign Up Below:</h1>
+<form class="card" action="/registrations" method ="POST">
+    <br>
+    <p class="signup-text"> Name: </p>
+
+    <input type="text" name="name" placeholder="Enter your username">
+    <br>
+     <p class="signup-text">Email: </p>
+    
+    <input type="email" name="email" placeholder="Enter your email">
+    <br>
+
+     <p class="signup-text">Password: </p>
+    
+    <input type="password" name="password" placeholder="Enter your password">
+    <br>    <br>
+
+    <input type="submit" class="btn btn-success btn-lg" value="Sign Up">
+
+</form>
+<h3><%=@message%></h3>
+</div>

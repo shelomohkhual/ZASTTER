@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  database: zastter_development
+  pool: 5
+  timeout: 5000
+
+  development:
+  adapter: postgresql
+  database: zastter_test
+  pool: 5
+  timeout: 5000
+
+  development:
+  adapter: postgresql
+  database: zastter_production
+  pool: 5
+  timeout: 5000
+  url: <%= ENV['DATABASE_URL'] %>
+
