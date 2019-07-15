@@ -1,5 +1,6 @@
     <div class="container register-form">
-        <div class="form">
+    <!--        <div class="form" > -->
+        <form method="POST" action="/registrations">
             <div class="note">
                 <p>Sign up form</p>
             </div>
@@ -8,19 +9,30 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name *" value="" />
+                            <input type="text" class="form-control" placeholder="Your Name *"  name="name"/>
+                            <label for="name_error"><%=@name_error%></label>   
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email*" value="" />
+                            <input type="text" class="form-control" placeholder="Your Nick Name*"  name="nickname" />
+                            <label for="nickname_error"><%=@nickname_error%></label>   
                         </div>
+                    </div>  
+                    <div class="col-md-6">
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Password *" value="" />
+                            <input type="email" class="form-control" placeholder="Your Email*" name="email" />
+                            <label for="email_error"><%=@email_error%></label>   
+                        </div>
+                    </div>  
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password *"  name="password"/>
                         </div>
                     </div>
-                </div>
-                <button type="button" class="btnSubmit">Submit</button>
+                    <input type="submit" value= "Sign Up"> 
+                 <!--   <button type="button" class="btnSubmit">Submit</button>  -->
             </div>
         </div>
+        </form>
     </div>
