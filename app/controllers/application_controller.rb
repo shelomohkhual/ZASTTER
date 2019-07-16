@@ -1,9 +1,12 @@
 require "byebug"
 class ApplicationController < Sinatra::Base
     require_relative "session_controller"
+    # require_relative 'reply_controller'
+    require_relative "home_controller"
    
     use SessionController
-   
+
+    use HomeController
     
     register Sinatra::ActiveRecordExtension
 
@@ -22,6 +25,7 @@ class ApplicationController < Sinatra::Base
     erb :home , layout: :'/layouts/sessions_layout'
     
     end
+    
 end
 
 
