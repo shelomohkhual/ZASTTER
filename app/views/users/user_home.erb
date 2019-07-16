@@ -1,28 +1,29 @@
-<%# TWEET  %>
-<%# <div class="TweetCard" style="width:100%;">
+<div class="TweetCard" style="width:100%;">
     <div class="UserNameCard">
             <h3>@user.name</h3> 
             <h5>@user.user_name</h5> 
     </div>
     <div>
         <form action="/users/home" >
-            <input style="width:100%; height:50px;" type="text" name="tweet" placeholder="What's Happening">
+            <input style="width:100%; height:30px;" type="text" name="tweet" placeholder="What's Happening">
             <button style="float:right;" type="button" value="Submit" class="btn btn-dark">Tweet</button></button>
         </form>
     </div>
-</div> %>
+</div>
 
 <%# NEWFEED  %>
-
+<hr>
 <div class="Newfeed">
 
         <div class="UserNameCard">
-                <h3><a href="/ tweet.user_id.user_name "> tweet.user_id.name </a></h3> 
-                <h5><a href="/ tweet.user_id.user_name "></a> tweet.user_id.user_name </a></h5> 
+                <h3><a href="/ tweet.user_id.user_name "> @user.name </a></h3> 
+                <h5><a href="/ tweet.user_id.user_name "></a> @user.user_name </a></h5> 
         </div>
+        
         <div class="tweet">
-            <p> tweet </p>
+            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
         </div>
+
         <div class="tweet-actions">
             <ul>
                 <li><a href="tweet.reply"> REPLY  tweet.reply.count  |</a></li>
