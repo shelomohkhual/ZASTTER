@@ -8,8 +8,7 @@ class User < ActiveRecord::Base
     validates_presence_of :nickname ,:name, :email
     validates :email, uniqueness: {case_sensitive: false} #, message: 'You provided invalid email'
     validates :nickname, uniqueness: {case_sensitive: false}
-    validates :name, uniqueness: {case_sensitive: false}
-
+   
     include BCrypt
     def password
       @password ||= Password.new(password_hash)
