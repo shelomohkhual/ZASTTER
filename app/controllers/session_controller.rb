@@ -26,7 +26,6 @@ class SessionController  < Sinatra::Base
    redirect 'users/home' 
    else
     @nickname_error=user.errors.messages[:nickname][0]
-    @name_error=user.errors.messages[:name][0]
     @email_error=user.errors.messages[:email][0]
     erb :'/registrations/signup' , layout: :'/layouts/layout'
    end
