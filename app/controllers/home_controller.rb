@@ -8,7 +8,7 @@ class HomeController  < Sinatra::Base
    register Sinatra::ActiveRecordExtension
 
  # Renders the user's individual home/account page.
- get '/users/user_home' do
+ get '/users/home' do
   # byebug
    @user = User.find(session[:user_id])
    @tweets = @user.tweets
