@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
-    border: 1px solid rgba(212, 212, 212, 0.322);
+    /* border: 1px solid rgba(212, 212, 212, 0.322); */
+
   }
   
   body {
@@ -8,11 +9,12 @@
     font-family: Cambria;
     font-size: 15px;
     letter-spacing: 2px;
-  
+    background:  rgb(245, 245, 245);
   }
+  
   h2, h3 {
     font-size: 20px;
-    text-align: center;
+    /* text-align: center; */
   }
   /* Style the header */
   .header {
@@ -23,12 +25,10 @@
   
   /* Style the top navigation bar */
   .topnav {
-    /* position: absolute; */
-    /* bottom: 0; */
+ 
     overflow: hidden;
     border-bottom: 2px solid black;
-    /* margin: 5px;
-    padding: 5px ; */
+    margin-bottom: 30px;
   }
   
   /* Style the topnav links */
@@ -127,3 +127,10 @@
     padding-bottom: 3px;
   }
   
+  .left-col {
+      border-right: 1px solid black;
+  }
+
+  .right-col {
+    border-left: 1px solid black;
+}

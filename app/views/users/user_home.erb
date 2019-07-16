@@ -1,21 +1,21 @@
 <%# TWEET  %>
-<div class="TweetCard" style="width:100%;">
+<%# <div class="TweetCard" style="width:100%;">
     <div class="UserNameCard">
             <h3>@user.name</h3> 
             <h5>@user.user_name</h5> 
     </div>
     <div>
         <form action="/users/home" >
-            <input style="width:100%;" type="text" name="tweet" placeholder="What's Happening">
-            <button style="align:right;"type="button" value="Submit" class="btn btn-dark">Dark</button></button>
+            <input style="width:100%; height:50px;" type="text" name="tweet" placeholder="What's Happening">
+            <button style="float:right;" type="button" value="Submit" class="btn btn-dark">Tweet</button></button>
         </form>
     </div>
-</div>
+</div> %>
 
 <%# NEWFEED  %>
 
 <div class="Newfeed">
-     @followers.recent.tweet.each do |tweet|
+
         <div class="UserNameCard">
                 <h3><a href="/ tweet.user_id.user_name "> tweet.user_id.name </a></h3> 
                 <h5><a href="/ tweet.user_id.user_name "></a> tweet.user_id.user_name </a></h5> 
@@ -31,5 +31,5 @@
             </ul>
         </div>
         <hr>
-    end
+    
 </div>

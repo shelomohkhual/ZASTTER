@@ -14,32 +14,35 @@
             <a href="/users/home">HOME</a>
             <div id="profile"><a href='/sessions/logout'>SIGNOUT</a></div>
             <div id="profile"><a href='/users/profile'>User.name</a></div>
+            <%# <div class="search" style="width:40px;"> %>
+                <%# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> %>
+            <%# </div> %>
         </div>
-        <hr>
 
     <div class="container">
         <div class="row">
 
-            <div class="col">
+            <div class="col left-col">
                  <%# ProfileCard  %>
                 <div class="ProfileCard">
                     <div class="UserNameCard">
-                        <h3>User.name</h3> 
-                        <h5>User.user_name</h5> 
+                        <h3>Shelomoh</h3> 
+                        <h5>@shelomoh</h5> 
                     </div>
                     <div class="ProfileCard-status">
                         <ul>
                             <li>
                                 <span>Tweets</span>
-                                <span>User.tweets.count</span>
+                                <span>13</span>
                             </li>
                             <li>
                                 <span>Following</span>
-                                <span>User.Following.count</span>
+                                <span>6</span>
                             </li>
                             <li>
                                 <span>Followers</span>
-                                <span>User.followers.count</span>
+                                <span>10</span>
                             </li>
                         </ul>
                     </div>
@@ -49,11 +52,11 @@
             <div class="col-6">
                 <div class="container">
                      TWEETS 
-                    <% yield %>
+                    <%= yield %>
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col right-col">
                 <div class="WhoToFollow">
                     <h3>Who To Follow</h3>
                     <div>
