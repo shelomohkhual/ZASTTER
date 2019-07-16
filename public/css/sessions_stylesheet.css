@@ -1,3 +1,7 @@
+.container {
+    margin: 0% 20%;
+}
+
 .head {
     position: relative;
     /* background-image: url("https://ak7.picdn.net/shutterstock/videos/9515537/thumb/1.jpg"); */
@@ -7,7 +11,7 @@
 .jumbotron {
     background-color: white;
     width: 50%;
-    margin: 10vh 25%;
+    margin: 1vh 25%;
 }
 
 .jumbotron h1 {
@@ -24,8 +28,18 @@
     border-radius: 20px;
 }
 
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+a {
+    color: black;
+}
 .btn-primary {
+    color: white;
     border-radius: 20px;
+    /* margin-left: 2%; */
 }
 
 .login-sign-up-buttons {
@@ -36,5 +50,14 @@
     width: 100%;
 }
 
+.fa-twitter {
+    font-size: 4rem;
+    text-align: center;
+    z-index: 100;
+    color: white;
+    position: absolute;
+    left: 30px;
+    top: 30px
+}
 
 
