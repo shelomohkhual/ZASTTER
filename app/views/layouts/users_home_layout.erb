@@ -28,7 +28,7 @@
                 <div class="card shadow-sm" style="">
                 <div class="card-body" style="width:100%;">
                         <h5 class="card-title"><a href="/ tweet.user_id.user_name "> <%=@user.name.upcase%></a></h5>
-                        <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a><%=@user.nickname%></a></h6>
+                        <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a>@<%=@user.nickname%></a></h6>
                     
                     <div style="text-align:center;" >
                         <div class="ProfileCard-status">
@@ -66,24 +66,21 @@
                 <div class="card-body" style="width:100%;">
                 <div class="WhoToFollow">
                     <h3>Who To Follow</h3>
-                    <div>
+                <div>
+                   <% @random_users.each do |user| %>
 
-                        <div>
-                            Adil | @adil
-                            <br>
-                            <button style="width:30%;" type="button" value="Submit" class="button">Tweet</button>
-                            <hr>
-                        </div>
+                       <div>
+                           <%= user.name.capitalize%>|<%= user.nickname.capitalize %>
+                           <br>
+                           <button style=“width:30%;” type=“button” class=“button”>Follow</button>
+                           <hr>
+                       </div>
 
-                        <div>
-                            Adil | @adil
-                            <br>
-                            <button style="width:30%;" type="button" value="Submit" class="button">Tweet</button>
-                            <hr>
-                        </div>
-
-                    </div>  
+                   <% end %>
+                   </div>
                 </div>
+
+
                 <%# <hr> %>
                 <div>
                      COPYRIGHT 
