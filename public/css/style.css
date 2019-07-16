@@ -1,7 +1,7 @@
 .head {
     position: relative;
     /* background-image: url("https://ak7.picdn.net/shutterstock/videos/9515537/thumb/1.jpg"); */
-    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 74%, 100% 74%, 45% 50%, 0 70%, 0% 70%, 0% 35%, 0 0);
+    /* clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 74%, 100% 74%, 45% 50%, 0 70%, 0% 70%, 0% 35%, 0 0); */
 }
 .jumbotron {
     background-color: white;
@@ -22,9 +22,12 @@
 .btn-outline-primary {
     border-radius: 20px;
 }
+.btn-outline-primary a{
+    color: black;
+}
 
 .btn-primary {
-    border-radius: 20px;
+    color: white;
 }
 
 .login-sign-up-buttons {
