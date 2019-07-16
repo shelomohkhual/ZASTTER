@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    /* border: 1px solid rgba(212, 212, 212, 0.322); */
+    /* border: 0.5px solid rgba(212, 212, 212, 0.322); */
 
   }
   
@@ -12,6 +12,9 @@
     background:  rgb(245, 245, 245);
   }
   
+  h1 {
+    fontn
+  }
   h2, h3 {
     font-size: 20px;
     /* text-align: center; */
@@ -81,13 +84,7 @@
     /* border: 1px solid black; */
   }
   
-  form {
-    /* border: 1px solid red; */
-    width: 400px;
-    height: 600px;
-    margin: auto;
-    /* padding: 50px; */
-  }
+
   ::placeholder {
     letter-spacing: 3px;
     padding: 3px;
@@ -133,4 +130,8 @@
 
   .right-col {
     border-left: 1px solid black;
+}
+
+form {
+  padding
 }
