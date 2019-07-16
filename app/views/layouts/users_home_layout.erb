@@ -14,7 +14,7 @@
         <div class="topnav shadow-sm"> 
             <a href="/users/home">HOME</a>
             <div id="profile"><a href='/sessions/logout'>SIGNOUT</a></div>
-            <div id="profile"><a href='/users/profile'><%=@user.name%></a></div>
+            <div id="profile"><a href='/users/home'><%=@user.name%></a></div>
             <%# <div class="search" style="width:40px;"> %>
                 <%# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> %>
@@ -28,26 +28,53 @@
                  <%# ProfileCard  %>
                 <div class="card shadow-sm" style="">
                 <div class="card-body" style="width:100%;">
-                        <h5 class="card-title"><a href="/ tweet.user_id.user_name "> <%=@user.name.upcase%></a></h5>
-                        <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a>@<%=@user.nickname%></a></h6>
-                    
-                    <div style="text-align:center;" >
-                        <div class="ProfileCard-status">
-                            <a href="#">tweets</a>
-                            <br>
-                            <a href="#">6</a>
+                <%if @other_user != nil  %>
+                    <% if @user.id != @other_user.id %>
+                        <h5 class="card-title"><a href="/ tweet.user_id.user_name "> <%=@other_user.name.upcase%></a></h5>
+                                <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a>@<%=@other_user.nickname%></a></h6>
+                            
+                            <div style="text-align:center;" >
+                                <div class="ProfileCard-status">
+                                    <a href="#">Tweets</a>
+                                    <br>
+                                    <a href="#"><%=@other_user.tweets.count%></a>
+                                </div>
+                                <div class="ProfileCard-status">
+                                    <a href="#">Followers</a>
+                                    <br>
+                                    <a href="#"><%=@other_user.followers.count%></a>
+                                </div>
+                                <div class="ProfileCard-status">
+                                    <a href="#">Following</a>
+                                    <br>
+                                    <a href="#"><%=@other_user.followers.count%></a>
+                                </div>
                         </div>
-                        <div class="ProfileCard-status">
-                            <a href="#">followers</a>
-                            <br>
-                            <a href="#">6</a>
+                        <% else nil%>
+                        <% end %>
+                          
+                <%else nil %>
+                  <h5 class="card-title"><a href="/ tweet.user_id.user_name "> <%=@user.name.upcase%></a></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a>@<%=@user.nickname%></a></h6>
+                        
+                        <div style="text-align:center;" >
+                            <div class="ProfileCard-status">
+                                <a href="#">Tweets</a>
+                                <br>
+                                <a href="#"><%=@user.tweets.count%></a>
+                            </div>
+                            <div class="ProfileCard-status">
+                                <a href="#">Followers</a>
+                                <br>
+                                <a href="#"><%=@user.followers.count%></a>
+                            </div>
+                            <div class="ProfileCard-status">
+                                <a href="#">Following</a>
+                                <br>
+                                <a href="#"><%=@user.followers.count%></a>
+                            </div>
                         </div>
-                        <div class="ProfileCard-status">
-                            <a href="#">following</a>
-                            <br>
-                            <a href="#">6</a>
-                        </div>
-                    </div>
+                <%end%>
 
                 </div>
                 </div>
@@ -68,7 +95,7 @@
                 <div class="WhoToFollow">
                     <h3>Who To Follow</h3>
                 <div>
-                <%if @random_users %>
+                <%if @random_users != nil %>
                    <% @random_users.each do |user| %>
 
                        <div>

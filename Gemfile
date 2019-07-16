@@ -11,7 +11,6 @@ gem 'pg'
 gem 'shotgun'
 gem 'byebug'
 gem "bcrypt"
-gem "irb"
 
 group :development do
 gem 'dotenv'
