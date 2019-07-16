@@ -66,7 +66,7 @@ end
   # Renders the user's individual home/account page. 
   get '/users/home' do
     # @user = User.find(session[:user_id])
-    erb :'/users/home', layout: :'/layouts/users_home_layout'
+    erb :'/users/user_home', layout: :'/layouts/users_home_layout'
   end
 
 

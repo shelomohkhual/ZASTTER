@@ -1,3 +1,129 @@
-div {
-    border: 1px solid red;
-}
+* {
+    box-sizing: border-box;
+    border: 1px solid rgba(212, 212, 212, 0.322);
+  }
+  
+  body {
+    margin: 0;
+    font-family: Cambria;
+    font-size: 15px;
+    letter-spacing: 2px;
+  
+  }
+  h2, h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  /* Style the header */
+  .header {
+    padding: 35px 35px 30px 35px; 
+    text-align: center;
+    border-bottom: 2px solid black;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    /* position: absolute; */
+    /* bottom: 0; */
+    overflow: hidden;
+    border-bottom: 2px solid black;
+    /* margin: 5px;
+    padding: 5px ; */
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    letter-spacing: 3px;
+    padding: 20px; 
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+  }
+  .category {
+    /* background-color: black;
+    color: white; */
+    /* padding: 10px; */
+  }
+  /* Create three equal columns that floats next to each other */
+  .column {
+    /* float: right; */
+    width: 300px;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid black;
+  }
+  
+  .column li {
+  
+  }
+  
+  
+  .index {
+    margin: auto;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .form {
+    margin: auto;
+    /* /* padding: 40px 80px 40px 80px; */
+    width: 400px;
+    height: 600px;
+    /* border: 1px solid black; */
+  }
+  
+  form {
+    /* border: 1px solid red; */
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    /* padding: 50px; */
+  }
+  ::placeholder {
+    letter-spacing: 3px;
+    padding: 3px;
+  }
+  .button{
+    background-color: black;
+    color: white;
+    width:400px;"
+  }
+  #profile {
+    text-align: right;
+    float: right;
+  }
+  
+  ul li {
+    letter-spacing: 3px;
+    color: black;
+    text-decoration: none;
+    
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+  }
+  .footer a{
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+  }
+  .footer a:hover{
+    border-bottom: 1px solid black;
+    padding-bottom: 3px;
+  }
+  

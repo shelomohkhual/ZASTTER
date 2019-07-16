@@ -1,1 +1,35 @@
-<a  href ="/sessions/logout"> logout </a>
+<%# TWEET  %>
+<div class="TweetCard" style="width:100%;">
+    <div class="UserNameCard">
+            <h3>@user.name</h3> 
+            <h5>@user.user_name</h5> 
+    </div>
+    <div>
+        <form action="/users/home" >
+            <input style="width:100%;" type="text" name="tweet" placeholder="What's Happening">
+            <button style="align:right;"type="button" value="Submit" class="btn btn-dark">Dark</button></button>
+        </form>
+    </div>
+</div>
+
+<%# NEWFEED  %>
+
+<div class="Newfeed">
+     @followers.recent.tweet.each do |tweet|
+        <div class="UserNameCard">
+                <h3><a href="/ tweet.user_id.user_name "> tweet.user_id.name </a></h3> 
+                <h5><a href="/ tweet.user_id.user_name "></a> tweet.user_id.user_name </a></h5> 
+        </div>
+        <div class="tweet">
+            <p> tweet </p>
+        </div>
+        <div class="tweet-actions">
+            <ul>
+                <li><a href="tweet.reply"> REPLY  tweet.reply.count  |</a></li>
+                <li><a href="tweet.retweet"> RETWEET  tweet.retweet.count  |</a></li>
+                <li><a href="tweet.like"> Like  tweet.like.count </a></li>
+            </ul>
+        </div>
+        <hr>
+    end
+</div>
