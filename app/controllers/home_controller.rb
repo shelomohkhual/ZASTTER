@@ -18,7 +18,7 @@ end
 
 post '/tweet' do
        @tweet=Tweet.create(text:params["tweet"] ,liked_count:0,reply_count:0,retweet_count: 0,user_id: session[:user_id] )
-       redirect '/users/user_home'
+       redirect '/users/home'
 end
 
 end
