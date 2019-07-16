@@ -19,7 +19,7 @@ class ApplicationController < Sinatra::Base
     # Renders the home or index page
     get '/' do
        
-    erb :home , layout: :'/layouts/layout'
+    erb :home , layout: :'/layouts/sessions_layout'
     
     end
 end
