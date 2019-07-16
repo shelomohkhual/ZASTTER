@@ -15,7 +15,7 @@ class SessionController  < Sinatra::Base
 
   # Handles the POST request when user submits the Sign Up form. Get user info from the params hash, creates a new user, signs them in, redirects them. 
   post '/registrations' do
-    byebug
+    # byebug
 
    user = User.create(nickname: params["nickname"],name: params["name"], email: params["email"])
    #byebug
@@ -37,7 +37,7 @@ class SessionController  < Sinatra::Base
     unless session[:user_id]
     erb :'/sessions/login', layout: :'/layouts/sessions_layout'
     else
-    redirect 'users/home' 
+    redirect '/users/home' 
     end
 end
 
@@ -45,13 +45,11 @@ end
   # Handles the POST request when user submites the Log In form. Similar to above, but without the new user creation.
   post '/sessions' do
     user = User.find_by(email: params["email"])
-   # byebug
-    if user.password==params["password"]
-    # unless user.nil?
-    session[:user_id] = user.id
-    redirect 'users/home' 
-    else
-      redirect 'sessions/login' 
+    if user.password == params["password"]
+      session[:user_id] = user.id
+      redirect '/users/home'
+    else 
+      redirect '/sessions/login'
     end
   end
  #---------------------------------------------------------------------------------
@@ -60,14 +58,6 @@ end
     session.clear
     redirect '/'
   end
-
-
-  # Renders the user's individual home/account page. 
-  get '/users/home' do
-    # @user = User.find(session[:user_id])
-    erb :'/users/user_home', layout: :'/layouts/users_home_layout'
-  end
-
 
 
 
