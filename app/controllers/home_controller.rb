@@ -17,6 +17,7 @@ class HomeController  < Sinatra::Base
         @user = User.find(session[:user_id])
         @tweets = @user.tweets.reverse
         @random_users = []
+        if User.count>3
             3.times do
                 x = User.find(rand(User.count) + 1)
                 while x == @user || @random_users.include?(x)
@@ -24,10 +25,19 @@ class HomeController  < Sinatra::Base
                 end
                 (@random_users << x)
             end
+        else
+            (User.count - 1).times do
+                x = User.find(rand(User.count) + 1)
+                while x == @user || @random_users.include?(x)
+                    x = User.find(rand(User.count) + 1)
+                end
+                (@random_users << x)
         #    @random_users = User.all.sample(3)
-            erb :'/users/user_home', layout: :'/layouts/users_home_layout'
+            end
         end
-    # 
+        erb :'/users/user_home', layout: :'/layouts/users_home_layout'
+
+    end
 
 
 
