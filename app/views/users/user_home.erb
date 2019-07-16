@@ -1,36 +1,38 @@
-<div class="TweetCard" style="width:100%;">
-    <div class="UserNameCard">
-            <h3>@user.name</h3> 
-            <h5>@user.user_name</h5> 
-    </div>
+
+<div class="card shadow-sm" style="">
+<div class="card-body" style="width:100%;">
+
     <div>
-        <form action="/users/home" >
-            <input style="width:100%; height:30px;" type="text" name="tweet" placeholder="What's Happening">
-            <button style="float:right;" type="button" value="Submit" class="btn btn-dark">Tweet</button></button>
+        <form action="/tweet" method="POST" >
+            <input type="text" name="tweet" placeholder="What's Happening">
+            <button style="width:100%;" type="submit" value="tweet" class="button">Tweet</button>
         </form>
     </div>
+</div>
 </div>
 
 <%# NEWFEED  %>
 <hr>
-<div class="Newfeed">
+<div class="newfeed">
+        <%# one tweet %>
+        <%@tweets.each do |tweet| %>
 
-        <div class="UserNameCard">
-                <h3><a href="/ tweet.user_id.user_name "> @user.name </a></h3> 
-                <h5><a href="/ tweet.user_id.user_name "></a> @user.user_name </a></h5> 
-        </div>
-        
         <div class="tweet">
-            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+            <div class="card shadow-sm" style="">
+                <div class="card-body" style="width:100%;">
+                    <h5 class="card-title"><a href="/ tweet.user_id.user_name ">@user.name </a></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a>@user.nickname </a></h6>
+                    <p class="card-text">tweet.text</p>
+                    <hr>
+                    <div class="tweet-actions" style="text-align:center;">
+                        <a href="tweet.reply" class="card-link"> REPLY | 5</a>
+                        <a href="tweet.retweet" class="card-link"> RETWEET | 5</a>
+                        <a href="tweet.like" class="card-link"> Like | 10</a>
+                
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="tweet-actions">
-            <ul>
-                <li><a href="tweet.reply"> REPLY  tweet.reply.count  |</a></li>
-                <li><a href="tweet.retweet"> RETWEET  tweet.retweet.count  |</a></li>
-                <li><a href="tweet.like"> Like  tweet.like.count </a></li>
-            </ul>
-        </div>
-        <hr>
+        <% end %>
     
 </div>

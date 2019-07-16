@@ -10,10 +10,10 @@
 </head>
 <body>
      <%# NAVBAR  %>
-        <div class="topnav"> 
+        <div class="topnav shadow-sm"> 
             <a href="/users/home">HOME</a>
             <div id="profile"><a href='/sessions/logout'>SIGNOUT</a></div>
-            <div id="profile"><a href='/users/profile'>User.name</a></div>
+            <div id="profile"><a href='/users/profile'><%=@user.name%></a></div>
             <%# <div class="search" style="width:40px;"> %>
                 <%# <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> %>
@@ -25,50 +25,66 @@
 
             <div class="col left-col">
                  <%# ProfileCard  %>
-                <div class="ProfileCard">
-                    <div class="UserNameCard">
-                        <h3>Shelomoh</h3> 
-                        <h5>@shelomoh</h5> 
+                <div class="card shadow-sm" style="">
+                <div class="card-body" style="width:100%;">
+                        <h5 class="card-title"><a href="/ tweet.user_id.user_name "> <%=@user.name.upcase%></a></h5>
+                        <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a><%=@user.nickname%></a></h6>
+                    
+                    <div style="text-align:center;" >
+                        <div class="ProfileCard-status">
+                            <a href="#">tweets</a>
+                            <br>
+                            <a href="#">6</a>
+                        </div>
+                        <div class="ProfileCard-status">
+                            <a href="#">followers</a>
+                            <br>
+                            <a href="#">6</a>
+                        </div>
+                        <div class="ProfileCard-status">
+                            <a href="#">following</a>
+                            <br>
+                            <a href="#">6</a>
+                        </div>
                     </div>
-                    <div class="ProfileCard-status">
-                        <ul>
-                            <li>
-                                <span>Tweets</span>
-                                <span>13</span>
-                            </li>
-                            <li>
-                                <span>Following</span>
-                                <span>6</span>
-                            </li>
-                            <li>
-                                <span>Followers</span>
-                                <span>10</span>
-                            </li>
-                        </ul>
-                    </div>
+
                 </div>
+                </div>
+
+
             </div>
 
             <div class="col-6">
                 <div class="container">
-                     TWEETS 
+                  
                     <%= yield %>
                 </div>
             </div>
 
             <div class="col right-col">
+            <div class="card shadow-sm" style="">
+                <div class="card-body" style="width:100%;">
                 <div class="WhoToFollow">
                     <h3>Who To Follow</h3>
                     <div>
 
                         <div>
-                            user.name | user.user_name
-                            <button type="button" class="btn btn-outline-dark">Follow</button>
+                            Adil | @adil
+                            <br>
+                            <button style="width:30%;" type="button" value="Submit" class="button">Tweet</button>
+                            <hr>
+                        </div>
+
+                        <div>
+                            Adil | @adil
+                            <br>
+                            <button style="width:30%;" type="button" value="Submit" class="button">Tweet</button>
                             <hr>
                         </div>
 
                     </div>  
                 </div>
+                <%# <hr> %>
                 <div>
                      COPYRIGHT 
                     <div class="CopyRight">
@@ -78,6 +94,8 @@
                 
 
             </div>
+        </div>
+         </div>
         </div>
     </div>
   
