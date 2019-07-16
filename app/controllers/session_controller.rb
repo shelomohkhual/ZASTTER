@@ -10,7 +10,7 @@ class SessionController  < Sinatra::Base
 
   # Renders the sign up/registration page in app/views/registrations/signup.erb
   get '/registrations/signup' do
-    erb :'/registrations/signup' , layout: :'/layouts/layout'
+    erb :'/registrations/signup' , layout: :'/layouts/sessions_layout'
   end
 
   # Handles the POST request when user submits the Sign Up form. Get user info from the params hash, creates a new user, signs them in, redirects them. 
@@ -27,7 +27,7 @@ class SessionController  < Sinatra::Base
    else
     @nickname_error=user.errors.messages[:nickname][0]
     @email_error=user.errors.messages[:email][0]
-    erb :'/registrations/signup' , layout: :'/layouts/layout'
+    erb :'/registrations/signup' , layout: :'/layouts/sessions_layout'
    end
   end
    #---------------------------------------------------------------------------------
@@ -35,7 +35,7 @@ class SessionController  < Sinatra::Base
  get '/sessions/login' do
  # byebug
     unless session[:user_id]
-    erb :'/sessions/login', layout: :'/layouts/layout'
+    erb :'/sessions/login', layout: :'/layouts/sessions_layout'
     else
     redirect 'users/home' 
     end
