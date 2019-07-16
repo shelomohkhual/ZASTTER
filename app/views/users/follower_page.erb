@@ -1,0 +1,12 @@
+<div class="tweet">
+<div class="card shadow-sm" style="">
+<div class="card-body" style="width:100%;">
+
+<% @user.followers.each do |follower| %>
+    <%= follower.name %> | <%= follower.nickname %>
+<hr>
+<% end %>
+
+</div>
+</div>
+</div>

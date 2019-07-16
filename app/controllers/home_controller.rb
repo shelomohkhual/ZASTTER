@@ -33,15 +33,15 @@ get '/:nickname' do
         @user = User.find(session[:user_id])
         @other_user = User.find_by(nickname: params[:nickname])
         @tweets = @other_user.tweets.reverse
-        # byebug
-        if session[:user_id]!= @user.id
-            @other_user = @user
-        else nil
-        end
-    
       erb :'/users/profile_home', layout: :'/layouts/users_home_layout'
     else redirect '/sessions/login'
     end
+  end
+
+  get '/:nickname/followers' do
+    @user = User.find(session[:user_id])
+    @followers = User.find_by(nickname: :nickname).followers
+    erb :'/users/follower_page', layout: :'/layouts/users_home_layout'
   end
 
 end

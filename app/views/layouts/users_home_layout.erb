@@ -29,7 +29,7 @@
                 <div class="card shadow-sm" style="">
                 <div class="card-body" style="width:100%;">
                 <%if @other_user != nil  %>
-                    <% if @user.id != @other_user.id %>
+                    <%# <% if @user.id != @other_user.id %>
                         <h5 class="card-title"><a href="/ tweet.user_id.user_name "> <%=@other_user.name.upcase%></a></h5>
                                 <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a>@<%=@other_user.nickname%></a></h6>
                             
@@ -50,10 +50,10 @@
                                     <a href="#"><%=@other_user.followers.count%></a>
                                 </div>
                         </div>
-                        <% else nil%>
-                        <% end %>
+                        <%# <% else nil%>
+                        <%# <% end %>
                           
-                <%else nil %>
+                <%else %>
                   <h5 class="card-title"><a href="/ tweet.user_id.user_name "> <%=@user.name.upcase%></a></h5>
                             <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a>@<%=@user.nickname%></a></h6>
                         
@@ -66,7 +66,7 @@
                             <div class="ProfileCard-status">
                                 <a href="#">Followers</a>
                                 <br>
-                                <a href="#"><%=@user.followers.count%></a>
+                                <a href="/<%=@user.nickname%>/followers"><%=@user.followers.count%></a>
                             </div>
                             <div class="ProfileCard-status">
                                 <a href="#">Following</a>
@@ -99,7 +99,8 @@
                    <% @random_users.each do |user| %>
 
                        <div>
-                           <%= user.name.capitalize%>|<%= user.nickname.capitalize %>
+                            <a href="/<%=user.nickname%>"><%= user.name.capitalize%> | @<%= user.nickname.capitalize %></a>
+        
                            <br>
                            <button style=“width:30%;” type=“button” class=“button”>Follow</button>
                            <hr>
