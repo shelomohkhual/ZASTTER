@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" > -->
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ZASTTER</title>
+</head>
+<body>
+     <%# NAVBAR  %>
+        <div class="topnav"> 
+        <a href="/users/home">HOME</a>
+        <div id="profile"><a href='/sessions/logout'>SIGNOUT</a></div>
+        <div id="profile"><a href='/users/profile'>WELCOME, User.name.upcase!</a></div>
+        </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                 ProfileCard 
+                <div class="ProfileCard">
+                    <div class="UserNameCard">
+                        <h3>User.name</h3> 
+                        <h5>User.user_name</h5> 
+                    </div>
+                    <div class="ProfileCard-status">
+                        <ul>
+                            <li>
+                                <span>Tweets</span>
+                                <span>User.tweets.count</span>
+                            </li>
+                            <li>
+                                <span>Following</span>
+                                <span>User.Following.count</span>
+                            </li>
+                            <li>
+                                <span>Followers</span>
+                                <span>User.followers.count</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="container">
+                     TWEETS 
+                    <% yeild %>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="WhoToFollow">
+                    <h3>Who To Follow</h3>
+                    <div>
+
+                        <div>
+                            user.name | user.user_name
+                            <button type="button" class="btn btn-outline-dark">Follow</button>
+                            <hr>
+                        </div>
+
+                    </div>  
+                </div>
+                <div>
+                     COPYRIGHT 
+                    <div class="CopyRight">
+                        <a href="https://yourwebsite.com">© COPYRIGHT 2019 | YOURWEBSITE.COM</a>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+  
+    
+         
+
+</body>
+</html>
