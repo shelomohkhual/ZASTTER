@@ -12,9 +12,10 @@
     background:  rgb(245, 245, 245);
   }
   
-  h1 {
+  /* h1 {
     fontn
-  }
+  } */
+
   h2, h3 {
     font-size: 20px;
     /* text-align: center; */
@@ -50,11 +51,11 @@
     border-bottom: 1px solid black;
     padding-bottom: 5px;
   }
-  .category {
-    /* background-color: black;
+  /* .category {
+    background-color: black;
     color: white; */
-    /* padding: 10px; */
-  }
+     /* padding: 10px;
+  } */ 
   /* Create three equal columns that floats next to each other */
   .column {
     /* float: right; */
@@ -64,9 +65,9 @@
     border: 1px solid black;
   }
   
-  .column li {
+  /* .column li {
   
-  }
+  } */
   
   
   .index {
@@ -92,7 +93,7 @@
   .button{
     background-color: black;
     color: white;
-    width:400px;"
+    width:400px;
   }
   #profile {
     text-align: right;
@@ -150,6 +151,12 @@ input {
 .tweet {
   margin-bottom: 5px;
 }
-.ProfileCard-status {
+/* .ProfileCard-status {
   /* width:100%; */
+/* } */ 
+
+/* Adil reply form design */
+
+.modal-header h5{
+  text-align: center;
 }
