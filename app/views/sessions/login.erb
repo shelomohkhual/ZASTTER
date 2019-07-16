@@ -1,22 +1,27 @@
 
-    <link rel="stylesheet" href="/css/style.css">
+<div class="container register-form">
+    <!--        <div class="form" > -->
+    <form method="POST" action="/registrations">
+        <div class="note">
+            <p>Login form</p>
+        </div>
 
-<div class="card-full">
-    <h1 class="card-header text-center text-warning">Log In Below:</h1>
-    <form class="card" action="/sessions" method ="POST">
-        <br>
-    <h3 class="text-danger error"><%=@message%></h3>
-        <p class="signup-text">Email: </p>
-        
-        <input type="email" name="email" placeholder="Enter your email">
-        <br>
-
-        <p class="signup-text">Password: </p>
-        
-        <input type="password" name="password" placeholder="Enter your password">
-        <br>    <br>
-
-        <input type="submit" class="btn btn-warning btn-lg" value="Log In">
+        <div class="form-content">
+            <div class="row">  
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your Email*" name="email" />
+                        <label for="email_error"><%=@email_error%></label>   
+                    </div>
+                </div>  
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password *"  name="password"/>
+                    </div>
+                </div>
+                <input class="btn btn-sm btn-primary btn-radius" type="submit" value= "Login">  
+                <!--   <button type="button" class="btnSubmit">Submit</button>  -->
+                </div>
+        </div>
     </form>
-    
 </div>
