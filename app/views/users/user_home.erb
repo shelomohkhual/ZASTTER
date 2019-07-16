@@ -4,7 +4,7 @@
 
     <div>
         <form action="/tweet" method="POST" >
-            <input type="text" name="tweet" placeholder="What's Happening">
+            <input type="text" name="tweet" placeholder="What's Happening" maxlength="140">
             <button style="width:100%;" type="submit" value="tweet" class="button">Tweet</button>
         </form>
     </div>
@@ -21,7 +21,7 @@
             <div class="card shadow-sm" style="">
                 <div class="card-body" style="width:100%;">
                     <h5 class="card-title"><a href="/ tweet.user_id.user_name "><%=@user.name%> </a></h5>
-                    <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a><%=@user.nickname%></a></h6>
+                    <h6 class="card-subtitle mb-2 text-muted"><a href="/ tweet.user_id.user_name "></a>@<%=@user.nickname%></a></h6>
                     <p class="card-text"><%=tweet.text%></p>
                     <hr>
                     <div class="tweet-actions" style="text-align:center;">
