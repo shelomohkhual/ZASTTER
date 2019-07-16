@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 ruby '2.6.3'
+
 gem 'sinatra'
 gem 'activerecord'
 gem 'sinatra-activerecord'
@@ -10,7 +11,8 @@ gem 'require_all'
 gem 'pg'
 gem 'shotgun'
 gem 'byebug'
-gem "bcrypt"
+gem 'bcrypt'
+gem 'irb'
 
 group :development do
 gem 'dotenv'
